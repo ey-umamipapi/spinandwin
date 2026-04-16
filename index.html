@@ -983,8 +983,15 @@
                     }
                   }
                 }
-              },
-              list_id: 'SNRVfT'
+              }
+            },
+            relationships: {
+              list: {
+                data: {
+                  type: 'list',
+                  id: 'SNRVfT'
+                }
+              }
             }
           }
         };
@@ -996,7 +1003,7 @@
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                'revision': '2023-02-22'
+                'revision': '2024-10-15'
               },
               body: JSON.stringify(payload)
             }
