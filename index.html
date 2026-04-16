@@ -973,7 +973,13 @@
             type: 'subscription',
             attributes: {
               list_id: 'SNRVfT',
-              email: email,
+              subscriptions: {
+                email: {
+                  marketing: {
+                    consent: 'SUBSCRIBED'
+                  }
+                }
+              },
               profile: {
                 data: {
                   type: 'profile',
@@ -1026,6 +1032,8 @@
         emailInput.value = '';
         submitBtn.disabled = false;
         submitBtn.classList.remove('loading');
+        setFieldError(firstNameInput, firstNameError, false);
+        setFieldError(emailInput, emailError, false);
 
         // Hide success state
         successState.classList.remove('visible');
